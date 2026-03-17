@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skyline Sprint</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="hud" class="panel">
+        <div class="stat">
+          <span class="label">Lap</span>
+          <span id="lap-value">1 / 3</span>
+        </div>
+        <div class="stat">
+          <span class="label">Place</span>
+          <span id="place-value">1st</span>
+        </div>
+        <div class="stat">
+          <span class="label">Speed</span>
+          <span id="speed-value">0</span>
+        </div>
+        <div class="stat wide">
+          <span class="label">Time</span>
+          <span id="timer-value">00:00.000</span>
+        </div>
+        <div class="stat">
+          <span class="label">Track</span>
+          <span id="track-value">Skyline Sprint</span>
+        </div>
+        <div class="stat wide">
+          <span class="label">Item</span>
+          <span id="item-value">None</span>
+        </div>
+      </div>
+
+      <button id="menu-button" class="menu-button hidden" type="button">Track Select</button>
+
+      <div id="countdown" class="countdown hidden">3</div>
+
+      <div id="message-panel" class="panel message hidden"></div>
+
+      <div id="menu-overlay" class="overlay">
+        <div class="overlay-card">
+          <p class="eyebrow">Locally runnable Three.js kart racer</p>
+          <h1>Skyline Sprint</h1>
+          <p class="overlay-copy">
+            A stylized, original kart racer inspired by arcade lap battles. Drift
+            through low-poly corners, hit boost pads, and outrun the field.
+          </p>
+          <div class="track-grid">
+            <button class="track-card active" id="track-0" type="button" data-track-index="0">
+              <span class="eyebrow">Track 1</span>
+              <strong>Skyline Sprint</strong>
+              <small>Wide corners, flowing boosts, fast recovery lines.</small>
+            </button>
+            <button class="track-card" id="track-1" type="button" data-track-index="1">
+              <span class="eyebrow">Track 2</span>
+              <strong>Harbor Heat</strong>
+              <small>Tighter turns, denser item lines, more pack pressure.</small>
+            </button>
+          </div>
+          <div class="controls-grid">
+            <div><span>Accelerate</span><strong>W / Up</strong></div>
+            <div><span>Brake</span><strong>S / Down</strong></div>
+            <div><span>Steer</span><strong>A D / Arrows</strong></div>
+            <div><span>Drift</span><strong>Shift</strong></div>
+            <div><span>Use Item</span><strong>Space</strong></div>
+            <div><span>Track Select</span><strong>Esc</strong></div>
+            <div><span>Reset</span><strong>R</strong></div>
+          </div>
+          <button id="start-button" type="button">Start Race</button>
+        </div>
+      </div>
+
+      <div id="finish-overlay" class="overlay hidden">
+        <div class="overlay-card compact">
+          <p class="eyebrow">Race complete</p>
+          <h2 id="finish-title">1st Place</h2>
+          <p id="finish-summary" class="overlay-copy"></p>
+          <div class="finish-actions">
+            <button id="restart-button" type="button">Race Again</button>
+            <button id="back-to-menu-button" class="secondary-button" type="button">Track Select</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
